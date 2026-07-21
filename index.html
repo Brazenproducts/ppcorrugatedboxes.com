@@ -54,25 +54,38 @@ header a.btn{background:#00b4d8;color:#0a1018;padding:9px 18px;text-decoration:n
 footer{background:#060d14;color:#2a3a4a;text-align:center;padding:18px;font-size:0.78rem}
 footer a{color:#3a5a7a;text-decoration:none}
 @media(max-width:720px){.two-col-layout{grid-template-columns:1fr}.sticky-sidebar{padding:0 5% 40px;position:static}.photo-pair img{height:160px}.apps-hex{grid-template-columns:1fr}}
-
-    
-    /* ===== MOBILE OVERFLOW FIX ===== */
-    body { overflow-x: hidden; }
+  
+    /* ===== MOBILE NAV FIX ===== */
+    html, body { overflow-x: hidden; max-width: 100%; }
     @media (max-width: 768px) {
-      nav {
+      /* All top-bar containers */
+      nav, header {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
         padding: 0 16px !important;
-        width: 100%;
-        box-sizing: border-box;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        min-height: 56px !important;
       }
-      .nav-logo, .nav-brand {
+      /* Logo / brand text — keep visible, truncate if needed */
+      nav h1, header h1,
+      .nav-logo, .nav-brand, .logo, .brand {
         font-size: 1rem !important;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 70vw;
-        display: block;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        max-width: 65vw !important;
+        flex-shrink: 1 !important;
       }
-      .nav-links { display: none !important; }
+      /* Hide all nav link lists */
+      .nav-links, .nav-items { display: none !important; }
+      /* Hide inline CTA buttons in nav/header on mobile */
+      nav a.nav-cta, nav a.nav-quote,
+      header a.cta-btn, header a.cta,
+      header .nav a, header .cta,
+      nav .nav-cta { display: none !important; }
     }
 
   </style>

@@ -55,19 +55,22 @@ footer{background:#060d14;color:#2a3a4a;text-align:center;padding:18px;font-size
 footer a{color:#3a5a7a;text-decoration:none}
 @media(max-width:720px){.two-col-layout{grid-template-columns:1fr}.sticky-sidebar{padding:0 5% 40px;position:static}.photo-pair img{height:160px}.apps-hex{grid-template-columns:1fr}}
 
+    
     /* ===== MOBILE OVERFLOW FIX ===== */
     body { overflow-x: hidden; }
     @media (max-width: 768px) {
       nav {
         padding: 0 16px !important;
-        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
       }
       .nav-logo, .nav-brand {
-        font-size: 0.95rem !important;
+        font-size: 1rem !important;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 55vw;
+        max-width: 70vw;
+        display: block;
       }
       .nav-links { display: none !important; }
     }

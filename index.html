@@ -125,10 +125,47 @@ footer a{color:#3a5a7a;text-decoration:none}
       }
     }
 
-  </style>
+  
+    .site-nav { background: #fff; border-bottom: 3px solid #1e6b3d; position: sticky; top: 0; z-index: 200; }
+    .site-nav-top { max-width: 1200px; margin: 0 auto; padding: 0.75rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .site-nav-logo { font-weight: 900; font-size: 1rem; color: #1e6b3d; text-decoration: none; }
+    .site-nav-links { display: flex; gap: 1rem; list-style: none; align-items: center; flex-wrap: wrap; }
+    .site-nav-links a { text-decoration: none; color: #333; font-size: 0.82rem; font-weight: 500; white-space: nowrap; }
+    .site-nav-links a:hover { color: #1e6b3d; }
+    .site-nav-cta { background: #1e6b3d; color: #fff !important; padding: 0.35rem 0.85rem; border-radius: 4px; }
+    .site-nav-strip { display: none; overflow-x: auto; white-space: nowrap; padding: 0.5rem 1rem; border-top: 1px solid #eee; scrollbar-width: none; background: #fff; }
+    .site-nav-strip a { display: inline-block; text-decoration: none; color: #333; font-size: 0.82rem; font-weight: 500; margin-right: 1rem; }
+    .site-nav-strip .strip-cta { color: #1e6b3d; font-weight: 700; }
+    @media (max-width: 900px) { .site-nav-links { display: none; } .site-nav-strip { display: block; } }
+
+</style>
 <!-- cb:2 -->
 </head>
 <body>
+<div class="site-nav">
+  <div class="site-nav-top">
+    <a href="/" class="site-nav-logo">PPCorrugatedBoxes.com</a>
+    <ul class="site-nav-links">
+      <li><a href="/agriculture/">Agriculture</a></li>
+      <li><a href="/seafood/">Seafood</a></li>
+      <li><a href="/frozen-food/">Frozen Food</a></li>
+      <li><a href="/bulk-shipping-boxes/">Bulk Shipping</a></li>
+      <li><a href="/pp-corrugated-panels/">PP Panels</a></li>
+      <li><a href="/industrial-boxes/">Industrial Boxes</a></li>
+      <li><a href="https://elipacko.com" class="site-nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+  <div class="site-nav-strip">
+    <a href="/">Home</a>
+    <a href="/agriculture/">Agriculture</a>
+    <a href="/seafood/">Seafood</a>
+    <a href="/frozen-food/">Frozen Food</a>
+    <a href="/bulk-shipping-boxes/">Bulk Shipping</a>
+    <a href="/pp-corrugated-panels/">PP Panels</a>
+    <a href="/industrial-boxes/">Industrial Boxes</a>
+    <a href="https://elipacko.com" class="strip-cta">Get a Quote</a>
+  </div>
+</div>
 <header>
   <div class="logo">PP<span>CorrugatedBoxes</span>.com</div>
   <a href="https://elipacko.com" class="btn">Get a Quote →</a>
